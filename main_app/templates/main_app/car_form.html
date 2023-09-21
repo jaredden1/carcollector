@@ -15,6 +15,7 @@
     {{ form.as_p }}
   </table>
   <input type="submit" value="submit" class="btn" />
+  <a href="{% url 'detail' car.id %}" class="btn">Back To Details</a>
 </form>
 
 {% endblock %}
