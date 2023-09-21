@@ -27,7 +27,7 @@ class CarCreate(CreateView):
 
 class CarUpdate(UpdateView):
     model = Car
-    fields = '__all__'
+    fields = ['description']
 
 class CarDelete(DeleteView):
     model = Car
