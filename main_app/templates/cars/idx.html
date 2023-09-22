@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Welcome to Your Garage</h1>
+<h1 class="center blue-text">Welcome to Your Garage</h1>
 
 {% for car in cars %}
 <a href="{% url 'detail' car.id %}">
-    <div class="card">
-        <div class="card-content">
-        <span class="card-title">{{ car.model }}</span>
+    <div class="card" style="margin: 25px;">
+        <div class="card-content" style="color: rgb(3, 129, 248); margin: 5px;">
+        <span class="card-title" style="color: red;">{{ car.model }}</span>
         <p>Make: {{ car.make }}</p>
         <p>Description: {{ car.description|linebreaks }}</p>
         {% if car.year > 0 %}

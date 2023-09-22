@@ -2,9 +2,9 @@
 {% block content %}
 
 {% if object %}
-<h1>Edit <span class="teal-text">{{object.model}}'s</span> Description</h1>
+<h1 class="center blue-text">Edit <span class="red-text">{{ object.make }} {{object.model}}'s</span> Description</h1>
 {% else %}
-<h1>Car Collector Addition</h1>
+<h1 class="center blue-text">Car Collector Addition</h1>
 {% endif %}
 <!-- Leaving the action empty makes the form post to the same url used to display it -->
 <form action="" method="POST">
@@ -12,9 +12,18 @@
   {% csrf_token %}
   <table>
     <!-- Render the inputs inside of <tr>s & <td>s -->
+   <div style="margin: 25px;">     
+    <style>
+        label {
+            font-weight: bold;
+            color: #333;
+            margin-right: 10px;
+        }
+    </style>
     {{ form.as_p }}
+</div>
   </table>
-  <input type="submit" value="submit" class="btn" />
+  <input type="submit" value="submit" class="btn blue" style="margin: 25px;" />
 </form>
 
 {% endblock %}

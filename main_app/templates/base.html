@@ -6,13 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Car Collector</title>
+  <title>The GearGarage 🏎️</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
   <header class="navbar-fixed">
-    <nav>
+    <nav class="blue">
       <div class="nav-wrapper">
         <ul>
           <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;The GearGarage</a></li>
@@ -25,12 +25,12 @@
       </div>
     </nav>
   </header>
-  <main class="container">
+  <main class="container white">
     {% block content %}
     {% endblock %}
   </main>
-  <footer class="page-footer">
-    <div class="right">All Rights Reserved, &copy; 2023 Car Collector &nbsp;</div>
+  <footer class="page-footer blue">
+    <div class="center">All Rights Reserved, &copy; 2023 The GearGarage &nbsp;</div>
   </footer>
 </body>
 </html>

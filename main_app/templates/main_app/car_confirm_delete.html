@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Remove Car</h1>
+  <h1 class="center blue-text">Remove Car</h1>
 
-  <h4>Are you sure you want to remove your <span class="teal-text">{{ object.make }} {{object.model}}</span> from your garage?</h4>
+  <h4 class="center">Are you sure you want to remove your <span class="red-text">{{ object.make }} {{object.model}}</span> from your garage?</h4>
 
   <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - I'm Over It!" class="btn">
-    <a href="{% url 'detail' car.id %}" class="btn" >No - I Still Love It!</a>
+    <div class="center">
+    <input type="submit" value="Yes - I'm Over It!" class="btn red" style="margin: 10px;">
+    <a href="{% url 'detail' car.id %}" class="btn blue" style="margin: 5px;">No - I Still Love It!</a>
+    </div>
   </form>
 {% endblock %}
